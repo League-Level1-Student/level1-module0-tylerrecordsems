@@ -51,8 +51,10 @@ public void drawHouse(int height) {
 	house.setRandomPenColor();
 house.move(height);
 if(houseSize == 2 ) {
+	drawFlatRoof();
+}else {
 	drawPointyRoof();
-}else
+}
 
 house.move(height);
 house.turn(-90);
