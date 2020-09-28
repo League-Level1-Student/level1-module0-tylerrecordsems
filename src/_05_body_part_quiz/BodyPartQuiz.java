@@ -51,48 +51,58 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-int score = 0;
-		// 2. Set the size of the window in the initializeGui() method 
+		int score = 0;
+		// 2. Set the size of the window in the initializeGui() method
 
 		// 4. Ask the user who this person is and store their answer
 		String guess = JOptionPane.showInputDialog("who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-		if (guess.equals ("arnold")) {
-			JOptionPane.showMessageDialog(null,"correct");
-			
-		}else {
-			JOptionPane.showMessageDialog(null,"incorrect its arnold");
+		if (guess.equals("arnold")) {
+			JOptionPane.showMessageDialog(null, "correct");
+			score += 1;
+		} else {
+			JOptionPane.showMessageDialog(null, "incorrect its arnold");
 		}
 		showNextImage();
 		String guesss = JOptionPane.showInputDialog("who is this?");
-		if (guesss.equals ("leo")) {
-			JOptionPane.showMessageDialog(null,"correct");
+		if (guesss.equals("leo")) {
+			JOptionPane.showMessageDialog(null, "correct");
+			score += 1;
 			showNextImage();
-		}else {
-			JOptionPane.showMessageDialog(null,"incorrect its leo");
-			showNextImage();
-		}
-		String guesss = JOptionPane.showInputDialog("who is this?");
-		if (guesss.equals ("morgan")) {
-			JOptionPane.showMessageDialog(null,"correct");
-			showNextImage();
-		}else {
-			JOptionPane.showMessageDialog(null,"incorrect its morgan");
+		} else {
+			JOptionPane.showMessageDialog(null, "incorrect its leo");
 			showNextImage();
 		}
+		String guessss = JOptionPane.showInputDialog("who is this?");
+		if (guessss.equals("morgan")) {
+			JOptionPane.showMessageDialog(null, "correct");
+			score += 1;
+			showNextImage();
+		} else {
+			JOptionPane.showMessageDialog(null, "incorrect its morgan");
+			showNextImage();
+		}
+		String guesssss = JOptionPane.showInputDialog("who is this?");
+		if (guesssss.equals("jack")) {
+			JOptionPane.showMessageDialog(null, "correct");
+			score += 1;
+			
+		} else {
+			JOptionPane.showMessageDialog(null, "incorrect its Jack");
+
+		}
+		JOptionPane.showMessageDialog(null, "Your score is " + score);
+
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
 		// 7. Use the showNextImage() method below to get the next image
-		
-		
 
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
-
 	}
 
 	public void showNextImage() {
