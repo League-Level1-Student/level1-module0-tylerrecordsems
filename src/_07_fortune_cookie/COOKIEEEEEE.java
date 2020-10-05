@@ -2,9 +2,11 @@ package _07_fortune_cookie;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class COOKIEEEEEE implements ActionListener {
@@ -18,12 +20,29 @@ public class COOKIEEEEEE implements ActionListener {
                frame.add(button);
                frame.pack();
                button.addActionListener(this);
+               
+      
+       
+
+
+
         
         }
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
+			Random ran = new Random();
+            int num = ran.nextInt(4); 
+	if(num== 0) {
+        JOptionPane.showMessageDialog(null, "You will die O_o");
+        } if(num== 1) {
+            JOptionPane.showMessageDialog(null, "You wont die O_o                  (but your dog will)");
+            } if(num== 2) {
+                JOptionPane.showMessageDialog(null, "DEATH BY SHARK O_o");
+            } else if (num== 3) {
+                JOptionPane.showMessageDialog(null, "DEATH BY CHICKEN O_o   #EAT MORE COWS!");
+            }
+	// TODO Auto-generated method stub
 			
 		}
 }
