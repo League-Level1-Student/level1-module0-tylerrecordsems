@@ -24,8 +24,7 @@ public void showButton(){
 		   Duck.addActionListener(this);
 		   frog.addActionListener(this);
 		   fluffy.addActionListener(this);
-	     // if button = duck
-		   frame.pack();
+		  frame.pack();
 	       
 }
 	void showDucks() {
@@ -62,5 +61,14 @@ public void showButton(){
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		JButton button = (JButton) arg0.getSource();
+		 if (button == Duck) {
+showDucks();
+System.out.println("sup");
+		 }else if (button == frog) {
+			 showFrog();
+		 }else if (button == fluffy) {
+			 showFluffyUnicorns();
+		 }
 	}
+	
 }
