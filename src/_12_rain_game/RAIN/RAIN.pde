@@ -12,21 +12,23 @@ int x = 100;
     ellipse(x, y, 100, 100);
     y += 5;
        rect(t , 490, 100, 100);
-       t=mouseX;
+       t=mouseX-50;
    for (int i = 0; i < 600; i++) {
 
    }
-   
+   checkCatch(x);
     if (y==550){
-    y = 80;
+  
+      y = 80;
      x =(int) random(1,600);
     }
    
  }
+ 
     void checkCatch(int x){
-         if (x > mouseX && x < mouseX+100)
+         if (x > mouseX-50 && x < mouseX+50 && y>=550)
             score++;
-         else if (score > 0) 
+         else if (score > 0 && y>550) 
             score--;
         println("Your score is now: " + score);
             fill(0, 0, 0);
