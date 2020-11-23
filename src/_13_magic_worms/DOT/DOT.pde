@@ -7,6 +7,7 @@ void setup (){
   background(#00FFF0);
 }
 void draw (){
+  makeMagical();
      for (int i = 0; i < 300; i++) {
 fill(y,p,x);
        ellipse(getWormX(x),getWormY(y),5,5);
@@ -19,7 +20,7 @@ x+=5;
  // y=5;
 //  x += t;
 //}
-makeMagical();
+
 
    }
 }
